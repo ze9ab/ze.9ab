@@ -1,0 +1,25 @@
+/* about.css */
+.dv{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+.av{position:sticky;top:100px;border-radius:40px;padding:2px;background:conic-gradient(from var(--a,0deg),var(--g),#4a2a18,var(--ca),#4a2a18,var(--g));animation:sp 8s linear infinite}
+.av div{border-radius:38px;background:linear-gradient(180deg,#4a2a18,#2a160c);padding:30px 24px 0;overflow:hidden}
+.av img{display:block;width:100%;transition:transform .5s var(--ease)}
+.av:hover img{transform:scale(1.04)}
+.fx{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0}
+.fx div{padding:18px 20px;border-radius:22px;background:var(--sf);border:1px solid var(--ln);transition:.4s var(--ease)}
+.fx div:hover{transform:translateY(-4px);border-color:#e6b96470}
+.fx b{display:block;font:700 26px/1.4 'Reem Kufi';color:var(--g)}
+.fx small{opacity:.65}
+.cw{margin:6px 0 10px;border-radius:22px;border:1px solid var(--ln);background:#120804;overflow:hidden;box-shadow:0 20px 50px #0006}
+.cb{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--ln);background:#ffffff08}
+.cb i{width:11px;height:11px;border-radius:50%;background:#ffffff22}
+.cb i:first-child{background:#ff5f57}
+.cb i:nth-child(2){background:#febc2e}
+.cb i:nth-child(3){background:#28c840}
+.cb span{margin-inline-start:auto;font:12px ui-monospace,monospace;opacity:.5}
+.cw pre{padding:20px;font:14px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;color:#f7ebd7d0;white-space:pre-wrap;min-height:250px;margin:0;overflow-x:auto}
+.k1{color:#e0a066}
+.k2{color:#e6b964}
+.k3{color:#8fd694}
+.k4{color:#ffffff55}
+.cw pre::after{content:"";display:inline-block;width:8px;height:1.1em;background:var(--g);vertical-align:text-bottom;animation:pu2 1s steps(2) infinite}
+@media(max-width:820px){.av{position:relative;top:0;max-width:340px;margin:auto}}
