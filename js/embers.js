@@ -1,0 +1,4 @@
+/* embers.js — الشرارات الذهبية في هيرو الرئيسية */
+(()=>{const cv=document.querySelector('#em');if(!cv)return;const x=cv.getContext('2d');let W=0,H=0,P=[];function mk(f){return{x:Math.random()*W,y:f?Math.random()*H:H+10,r:Math.random()*2+.6,v:Math.random()*.8+.3,d:Math.random()*6.28,s:Math.random()*.02+.005,o:Math.random()*.55+.3}}
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;P=Array.from({length:70},()=>mk(1))}
+(function f(){if(!matchMedia('(prefers-reduced-motion:reduce)').matches){if(cv.offsetWidth!==W||cv.offsetHeight!==H)rs();x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';P.forEach(p=>{p.y-=p.v;p.d+=p.s;p.x+=Math.sin(p.d)*.5;p.o-=.0015;if(p.y<-10||p.o<=0)Object.assign(p,mk(0));const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*6);g.addColorStop(0,`rgba(255,200,110,${p.o})`);g.addColorStop(1,'rgba(230,140,50,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*6,0,7);x.fill()})}requestAnimationFrame(f)})()})();
