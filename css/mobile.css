@@ -1,0 +1,42 @@
+/* mobile.css — يتحمّل آخر ملف CSS في كل صفحة، عشان قواعد الموبايل متتلغيش بقواعد الصفحات */
+@media(max-width:820px){
+  /* كل الشبكات ذات العمودين تبقى عمود واحد على الموبايل */
+  .hero .w,.demo .w,.dv,.ct,.mt,.try2{grid-template-columns:1fr;gap:24px}
+  .hero .w{min-height:0;padding-bottom:20px}
+  /* حماية من أي عنصر يوسّع الصفحة */
+  .dv>*,.ct>*,.mt>*,.try2>*,.hero .w>*{min-width:0}
+  .w{padding-inline:18px}
+  .cw pre{font-size:12.5px;padding:16px}
+  .mq div{font-size:38px}
+  .mq.r div{font-size:26px}
+  .cardimg{max-width:420px;margin-inline:auto}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .fx{grid-template-columns:1fr 1fr;gap:10px}
+  .fx div{padding:14px}
+  .fx b{font-size:20px}
+  .shots img{height:360px}
+  .dh{gap:16px}
+  .dh .ib{width:68px;height:68px;border-radius:22px}
+  .lst a,.lst div.r{padding:14px 16px;gap:12px}
+  .tsr{width:min(250px,72vw)}
+  .tsb{width:min(214px,60vw);height:min(214px,60vw)}
+  .ph{max-width:100%}
+  .big{font-size:clamp(24px,7vw,34px)}
+  .tipc{padding:34px 18px}
+  .faq summary{font-size:18px}
+  .faq details{padding:0 16px}
+  footer .w{justify-content:center;text-align:center}
+}
+
+@media(max-width:820px){
+  /* زرار "للأعلى" ميغطيش على لينكات الفوتر */
+  footer{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+  .ft0 .lgm{width:min(46vw,240px)}
+  #nv{inset-inline:8px}
+}
+@media(max-width:820px){
+  footer .ft0{margin-bottom:20px}
+  .kb{display:none}
+}
